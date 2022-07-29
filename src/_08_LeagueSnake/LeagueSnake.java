@@ -11,8 +11,9 @@ public class LeagueSnake extends PApplet {
      * 
      * Put all the game variables here.
      */
-    
-
+    	int Segment;
+    	int foodX;
+    	int foodY;
     
     /*
      * Setup methods
@@ -21,17 +22,20 @@ public class LeagueSnake extends PApplet {
      */
     @Override
     public void settings() {
-        
+        size(500,500);
     }
 
     @Override
     public void setup() {
-        
+        int Head = Segment;
+        frameRate(20);
+        dropFood();
     }
 
     void dropFood() {
         // Set the food in a new random location
-        
+    	foodX = ((int)random(50)*10);
+    	foodY = ((int)random(50)*10);
     }
 
     /*
@@ -42,16 +46,21 @@ public class LeagueSnake extends PApplet {
 
     @Override
     public void draw() {
-        
+        background(25,50,100);
+        drawFood();
+        drawSnake();
     }
 
     void drawFood() {
         // Draw the food
-        
+        foodX=10*10;
+        fill(0,0,50);
     }
 
     void drawSnake() {
         // Draw the head of the snake followed by its tail
+    	rect(300,300,20,30);
+    	fill(50,0,0);
     }
 
     void drawTail() {

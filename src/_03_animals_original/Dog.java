@@ -1,6 +1,8 @@
 package _03_animals_original;
 
-public class Dog {
+
+
+public class Dog{
 	String name;
 	String furColor;
 	boolean isGirl;
